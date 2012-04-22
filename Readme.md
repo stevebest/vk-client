@@ -2,7 +2,9 @@
 vk-client
 =========
 
-VK-Client is an implementation of _VK.com_ aka _ВКонтакте_ (_VKontakte_) API for Node.
+VK-Client is an implementation of _VK.com_ aka _ВКонтакте_ (_VKontakte_) API
+for Node.
+
 
 Installation
 ------------
@@ -12,6 +14,12 @@ No surprises here.
 ```
 npm install vk-client
 ```
+
+Running the test requires setting up `VK_API_ID` and `VK_API_SECRET`
+environment variables. For example:
+
+    $ make test VK_API_ID=your_api_id VK_API_SECRET=your_api_secret
+
 
 Usage
 -----
@@ -32,7 +40,6 @@ var params = {
 
 vkClient.api('users.get', params, function (err, result) {
   console.log(result);
-  done();
 });
 ```
 

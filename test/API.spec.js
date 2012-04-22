@@ -40,7 +40,7 @@ describe('API', function() {
 
 describe('API Client', function () {
 
-  var apiId     = process.env['VK_API_ID'] || '2910929';
+  var apiId     = process.env['VK_API_ID'];
   var apiSecret = process.env['VK_API_SECRET'];
 
   it('allows calling any API method', function (done) {
