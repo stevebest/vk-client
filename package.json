@@ -1,16 +1,23 @@
 {
-  "author": "Stepan Stolyarov <stepan.stolyarov@gmail.com> (http://stepanstolyarov.ru/)",
   "name": "vk-client",
-  "description": "A JavaScript client for the vk.com API",
   "version": "0.0.0",
+  "author": "Stepan Stolyarov <stepan.stolyarov@gmail.com>",
+  "description": "A node.js module for the vk.com API",
+  "scripts": {
+    "test": "mocha"
+  },
+  "main": "./lib/index",
   "repository": {
     "type": "git",
     "url": "git://github.com/stevebest/vk-client.git"
   },
-  "main": "./lib/index",
-  "scripts": {
-    "test": "mocha"
-  },
+  "keywords": [
+    "vk",
+    "vk.com",
+    "vkontakte",
+    "вконтакте",
+    "api"
+  ],
   "dependencies": {},
   "devDependencies": {
     "mocha": "1.x"
