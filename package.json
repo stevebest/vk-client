@@ -23,6 +23,7 @@
     "mocha": "1.x"
   },
   "optionalDependencies": {},
+  "license": "MIT",
   "engines": {
     "node": "0.6.x"
   }
