@@ -1,7 +1,13 @@
+MOCHA = ./node_modules/.bin/mocha
+REPORTER = spec
+
+DOCCO = ./node_modules/.bin/docco
+
 test:
-	./node_modules/.bin/mocha
+	@$(MOCHA) \
+		--reporter $(REPORTER)
 
 doc:
-	./node_modules/.bin/docco lib/*.js
+	@$(DOCCO) lib/*.js
 
 .PHONY: test doc
