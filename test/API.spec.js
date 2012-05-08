@@ -38,32 +38,3 @@ describe('API', function() {
   });
 
 });
-
-describe('API Client', function () {
-
-  var apiId     = process.env['VK_API_ID'];
-  var apiSecret = process.env['VK_API_SECRET'];
-
-  it('allows calling any API method', function (done) {
-    var vkClient = new vk.Client();
-
-    if (!apiSecret) {
-      assert.fail(apiSecret, (void 0), 'API Secret is not set up', '!==');
-      return;
-    }
-
-    vkClient.apiId(apiId).apiSecret(apiSecret);
-
-    var params = {
-      'uids'   : '1', // Look up Pavel Durov himself
-      'fields' : 'uid,first_name,last_name,photo'
-    };
-
-    vkClient.api('users.get', params, function (err, result) {
-      assert.ifError(err);
-      assert.ok(result.response);
-      done();
-    });
-  });
-
-});
