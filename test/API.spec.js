@@ -33,7 +33,8 @@ describe('API', function() {
     };
 
     var qs = vkAPI.query(params, apiSecret);
-    assert.equal(qs, 'api_id=4&v=3.0&method=getFriends&sig=fbd3bc00725799ecd835bf661391ac34');
+    assert.equal(qs, 'api_id=4&v=3.0&method=getFriends&'
+      + 'sig=fbd3bc00725799ecd835bf661391ac34');
   });
 
 });
@@ -59,7 +60,7 @@ describe('API Client', function () {
     };
 
     vkClient.api('users.get', params, function (err, result) {
-      assert.equal(err, null);
+      assert.ifError(err);
       assert.ok(result.response);
       done();
     });
