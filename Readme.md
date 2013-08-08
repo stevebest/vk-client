@@ -1,10 +1,21 @@
-
 vk-client
 =========
 
 VK-Client is an implementation of _VK.com_ aka _ВКонтакте_ (_VKontakte_) API
 for Node.
 
+DEPRECATION NOTICE
+------------------
+
+This module was written as a quick and dirty hack and was never meant to be usable.
+Frankly, it's quite stupid. Its API is ugly, it can't do Node streams and OAuth.
+
+Even its name is kinda stupid.
+
+For all intents and purposes, this module is dead.
+
+Use https://github.com/stevebest/node-vkontakte instead. It's better, and I might
+continue to develop it someday.
 
 Installation
 ------------
